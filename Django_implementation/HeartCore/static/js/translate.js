@@ -4,7 +4,7 @@
  "#kevin_lambert" :["Kevin Lambert","Baxter Jones"],
  "#flower_bomb" : ["Flower Bomb","EDI"],
  "#sacre_bleu" : ["Sacre Bleu","DOT"],
- "#tyler_d" : ["Tyler D/Vanessica Carver", "Vanessica Carver"],
+ "#tyler_d" : ["Tyler D/Vanessica Carver", "CAL"],
  "#kristen_barlow" : ["Kristen Barlow/Veronica Ice","GEM"],
  "#flynn_barbary" : ["Flynn Barbary/Hakoda","FIN"],
  "#angie_ahn" : ["Angie Ahn/Maybe Baby","Maybe Baby"],

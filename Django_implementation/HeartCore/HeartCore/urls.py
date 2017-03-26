@@ -18,6 +18,7 @@ from django.contrib import admin
 import Market.views
 
 urlpatterns = [
+    url(r'^$', Market.views.index),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^index/', Market.views.index),
     url(r'^details/',Market.views.details),
