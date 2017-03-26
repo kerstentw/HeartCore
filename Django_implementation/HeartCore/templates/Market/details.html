@@ -13,7 +13,7 @@
 <img class = "cast_img" src= "/static/img/chars/{{Name}}2.jpg" style = "width: 250px; display: none">
 
 </div>
-    <h1> {{Name}} </h1>
+    <h1 id={{Name}}> {{Name}} </h1>
 
    
     <div class = "char_story">
@@ -86,7 +86,7 @@ var hack = function(){
   $(".cast_img").show();
   $(".char_img").hide();
   $(".hackit").hide();
- 
+  set_real_name(); 
 }
 
 </script>

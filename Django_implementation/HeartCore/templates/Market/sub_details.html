@@ -8,16 +8,18 @@
 
 <div style = "width:100%; overflow:hidden">
 
-<h1>{{ title }}</h1>
-
-
+<object type = "image/svg+xml" data = "/static/img/{{title}}.svg" style = "height:200px">
+    Browser Does not Support SVG
+</object>
 <p class = "char_story">
 
 {% if title in test %}
 
   <h2>{{title}}</h2>
+    
 
     {% for name, story in dict_of_bios.items %}
+
         <h3 id = {{name}} >{{name}}</h3>
 
        <div class = "char_story" style = "">
@@ -33,13 +35,15 @@
 
 
 {% else %}
-{{ summary }}
 </p>
 
-<h2>Members</h2>
+<h2>{{title}}</h2>
 
+  {{ summary }}
+
+ <h2> Members: </h2>
     {% for name, story in dict_of_bios.items %}
-        <h3>{{name}}</h3>
+        <h3 id = {{name}} >{{name}}</h3>
 
         <div class = "cast_story" style = "display: none">
              <br><br>{{story.real}}<br><br>
@@ -94,7 +98,7 @@ var hack = function(){
   $(".cast_img").show();
   $(".char_img").hide();
   $(".hackit").hide();
-
+  set_real_name();
 }
 
 </script>
