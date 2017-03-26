@@ -1,0 +1,60 @@
+{% extends 'templates/Market/base.html' %}
+{% block content %}
+
+
+<div class = "container">
+<div class = "col-md-6" style = "background-color: #EEEEEE; padding-top: 10%; padding-bottom: 10%">
+<h2>Current Cart</h2>
+
+    {% for item in IN_CART %}
+    {{item}} <br/>
+    {% endfor %}
+
+<h3>Total: {{ IN_CART | length }}</h3>
+
+<button class = "btn btn-default" onclick = "clearCart()">Clear Cart</button>
+
+<a class = "btn btn-default" href = "/index/#Market">Browse More</a>
+
+
+</div>
+<div style="margin-top:5%">
+  <button onclick = "checkout()" class = "btn btn-lg btn-success">Checkout</button>
+</div>
+
+<div class = "col-md-6 checkout" style = "margin-top: 5%;">
+<div class = "btc_addr" style = "display:none; padding-top: 10%; padding-bottom: 10%; background-color: #EEEEEE; ">
+    
+  <div style = "padding: 5%">
+     
+      <h3>Bitcoin Address</h3>
+      <img src = "/static/img/Heartcore_BTCaddr.png" style = "height: 150px"><br>
+      <p>1AeJdoKBFqfRJBncnstiWpPhXSKxwqK2KL</p>
+    </div>    
+  </div>
+
+</div>
+
+</div>
+<script>
+
+    var checkout = function(){
+        $(".btc_addr").show()
+    }
+
+    var clearCart = function(){ $.get("/update_cart?clear=T",
+                                     {"clear":"T"},function(data){
+                                                       console.log(data);
+                                                       setTimeout(location.reload(),1000);
+                                                   });
+                                 
+                              }
+
+    //elem_list = $(".col-md-3")
+
+    //elem_list[0].getElementsByTagName("h3")[0].innerText =
+
+    
+</script>
+
+{% endblock content %}

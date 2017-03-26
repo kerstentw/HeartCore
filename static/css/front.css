@@ -1,0 +1,209 @@
+#title_container{
+height:110%;
+/*background-image: url('/static/imgs/cat.jpg');*/
+background-attachment: fixed;
+font-family: courier new
+}
+
+#runIt{
+bottom: 0;
+padding-top:20%
+}
+
+#cast{
+    height: 110%;
+}
+
+#circle{
+	border: 1px solid #AAAAAA;
+	border-radius: 50%;
+	position: relative;
+	height:500px;
+	width:500px;
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Safari */
+        transform: rotate(0deg); 
+
+}
+
+#circle_container{
+-ms-overflow: hidden;
+-webkit-overflow: hidden;
+overflow: hidden;
+padding-top: 3%;
+}
+
+
+#circle_mb{
+	border: 1px solid #AAAAAA;
+	border-radius: 50%;
+	margin:auto;
+	position: relative;
+	height:400px;
+	width:400px;
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Safari */
+        transform: rotate(0deg);
+         
+}
+
+
+#fox{
+	height: 200px;
+	width:200px;
+	opacity: 0.6;
+	display:block;
+	margin-left: auto;
+	margin-right: 90px;
+	margin-top: 90px;
+	margin-bottom: auto;
+        transition: 1s ease-out;
+
+}
+
+#main_container{
+         height:110%;
+	 margin-top: 10%;
+}
+
+
+#char_info{
+    transition: ease-in
+}
+
+
+.spin_button{
+height:30px;
+width: 50px;
+border: 1px solid #DDDDDD;
+}
+
+.spin_button:hover{
+background-color: rgba(0,0,0,0.1)
+}
+
+.spin_button:active{
+    background-color: #AAAAAA;
+}
+
+
+ 
+.small_circle{
+	border-radius: 100%;
+	border: 1px solid #AAAAAA;
+	width:60px;
+	height: 60px;
+	position: absolute;
+	z-index:99;
+	background-color: #FFFFFF;
+}
+.right{
+	right: -8%;
+	top: 30%;
+	
+
+}
+
+.left{
+	left: -8%;
+	top: 30%;
+}
+
+.bottom_left{
+	bottom: -1%;
+	left: 10%	
+}
+
+.bottom_right{
+	bottom: -1%;
+	left: 70%	
+}
+
+.top{
+	top: -8%;
+	left: 43%;
+	
+}
+
+
+.bottom_left:focus{
+        transition: background-color 1s ease-out;
+	background-color: rgb(255,255,255)
+	
+}
+	
+
+
+
+.right:active{
+	background-color: rgb(135,100,150)
+	
+}
+
+
+
+
+.left:active{
+	background-color: rgb(125,150,255)
+	
+}
+
+.bottom_right:active{
+        
+	background-color: rgb(150,255,125)
+	
+}
+
+
+
+
+
+.top:active{
+        transition: background-color 1s ease;
+	background-color: rgb(255,125,150)
+	
+}
+
+
+
+
+.bottom_right:hover{
+	transition: background-color 1s ease;
+        background-color: rgb(150,255,125)
+	
+}
+
+
+.top:hover{
+        transition: background-color 1s ease;
+	background-color: rgb(255,125,150)
+	
+}
+
+
+
+.bottom_left:hover{
+        transition: background-color 1s ease;
+	background-color: rgb(255,125,150)
+	
+}
+
+.left:hover{
+        transition: background-color 1s ease;
+	background-color: rgb(125,150,255)
+	
+}
+
+
+.right:hover{
+        transition: background-color 1s ease;
+	background-color: rgb(125,150,255)
+	
+}
+
+
+.bottom:hover{
+        transition: background-color 1s ease;
+	background-color: rgb(125,150,255)
+	
+}

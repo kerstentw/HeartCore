@@ -1,0 +1,131 @@
+<html>
+<head>
+  <title>HEARTCORE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/static/js/jquery-3.1.1.min.js"></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+  <link rel = "stylesheet" type = "text/css" href = "/static/css/front.css" >
+  <link rel = "stylesheet" type = "text/css" href = "/static/css/bootstrap.min.css" >
+  <link rel = "stylesheet" type = "text/css" href = "/static/css/bootstrap-theme.min.css" >
+  <script src = "/static/js/angular.min.js"></script>
+  <script src = "/static/js/ang_app.js"></script>
+  <script src = "/static/js/rotate.js"></script>
+  <script src = "/static/js/front.js"></script>
+</head>
+
+<body ng-app = "heartcore" ng-controller = "heart_ctrl">
+
+<!--
+<div>
+    {{characters}}<br><br>
+    {{cast}}
+</div>
+-->
+
+<div class = "container" id = "title_container"> <!-- Title Container -->
+<h1>
+  <img src = "/static/imgs/hearty.png" style = "height: 50px">HEARTCORE
+</h1>
+
+<p>
+Welcome to HeartCore Systems v0.02.  Press RUN to continue.
+
+</p>
+
+<div id = "runIt" class = "btn btn-info"> <h3>?HeartCore.run()</h3></div>
+</div> <!-- End Title Container -->
+
+
+
+
+
+
+
+<div id="main_container" class = ""> <!-- Selection Container -->
+  
+<div id = "circle_container" >
+    <div id = "circle_mb">
+  
+	<div id = "group_1" class = "small_circle right" _key="dicls">
+          <div id = "g1_liner"> 
+           <div id = "g1_info"> 
+                 <a class = "display_txt" href = "keys"></a>
+           </div>
+          </div> 
+        </div>
+
+	<div id = "group_2" class = "small_circle left">
+          <div id = "g2_liner"> 
+           <div id = "g2_info"> 
+                
+           </div>
+          </div>
+        </div>
+	
+        <div id = "group_3" class = "small_circle bottom_right">
+          <div id = "g3_liner"> 
+           <div id = "g3_info"> 
+                
+           </div>
+          </div>
+        </div>
+	  
+        <div id = "group_4" class = "small_circle bottom_left">
+        <div id = "g4_liner" > 
+           <div id = "g4_info"> 
+                
+           </div>
+          </div>
+        </div>
+        <div id = "group_5" class = "small_circle top">
+          <div id = "g5_liner" > 
+           <div id = "g4_info"> 
+                
+           </div>
+          </div>
+        </div>
+
+
+
+<img id = "fox" src = "/static/imgs/foxgif.gif"></img>
+
+<!--	<img id = "fox" src = "/static/imgs/fox.png"></img>
+ -->
+ </div>
+<div id = "char_info">
+</div>
+    <div class = "" style="padding-left:10px display:block;">
+      <div id = "cw" class = "spin_button"><img src = ""></div>
+      <div id = "ccw" class = "spin_button"><img src=""></div>
+    </div>
+
+    <div id = "gotoCast" style="background-color:black; color: rgb(0,255,0)" >
+      <h3>?HeartCore.cast.view()</h3> 
+    </div>
+
+
+
+
+</div>
+
+  
+</div>
+
+
+
+
+<!-- END Selection Container -->
+
+
+  
+<div id = "cast" class = "container" style = "margin-top:20%"> <!-- PLaybill Container  -->
+
+
+<h1>Cast and Crew</h1>  
+
+<h3 id="BackUp">?HeartCore.restart()</h3>
+</div>
+
+</body>
+
+<html>

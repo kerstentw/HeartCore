@@ -1,0 +1,127 @@
+{% extends 'templates/Market/base.html' %}
+{% block content %}
+
+<style>
+.select1 {
+    border: 2px white solid;
+    border-radius: 0px;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 20px;
+    color: white;
+    margin: 10px; 
+}
+
+
+.select2 {
+    border: 2px #666666 solid;
+    border-radius: 0px;
+    background-color: rgba(0,0,0,0.0);
+    font-size: 20px;
+    color: #666666;
+    
+}
+
+</style>
+<!--
+<link href="/static/js/sakura/jquery-sakura.css" rel="stylesheet" type = "text/css">
+-->
+<div class = "top-header" style = "width: auto; height: 100%; overflow: hidden;background-attachment: fixed; background-image:url('/static/img/ch_backer.jpg')">
+    <div style = "font-family: 'Prosto One', cursive">
+
+<div id = "Banner_Container" class = "container" style = "padding-top: 10%">
+
+  <img src = "/static/img/foxgif.gif" style = "height:250px">
+  <div style = "color: white; font-size: 50px;">IZANAMI Industries</div>
+      <div style = "color: white; font-size: 25px">
+          Craft,
+          Creativity,
+          Control.
+      </div>
+</div>
+    
+</div>
+</div>
+</div>
+
+<div id = "Market" class = "container market_holder" style = "padding: 1%">
+
+
+    {% for choice,members in cast.items %}
+
+    <div class = "container" style = "overflow:hidden; padding: 0px">
+      <h1>{{choice}}</h1>
+
+      {% for member in members %} 
+      <div  class = "col-md-3" style = "padding-left: 0px; padding-right: 0px">
+    
+      <div class = "container-fluid mark_entry" style = "border: 1px solid #DDDDDD; margin: 5%; height: 350px; overflow: hidden;padding:0px; border-radius: 5px 5px 0px 0px;">
+
+      <div class = "image_wrap" style = "background: url('/static/img/chars/{{member}}.jpg');background-position: right; background-size: 600px;height:225px;overflow:hidden;" > 
+
+          <!--<img src = "/static/img/chars/{{member}}.jpg" style = "height:450px;width: 600px;padding-left:-100px">-->
+      </div>
+        <div class = "inner_text" style = "padding:15px"> 
+          <h3 id = {{member}}>
+            {{member}}
+          </h3>    
+
+          <a href = "/details?entry={{member}}" class = "select2 btn btn-default">View Details</a><br/>
+        </div>
+      </div>
+
+    </div>
+{% endfor %}
+
+</div>
+{% endfor %}
+</div>
+
+
+<!-- BEGIN LISTINGS -->
+
+
+<div id = "fac" class = "page_element container-fluid" style = "height:75%;color: white;background: url('/static/img/lab_assist_backer.jpg'); background-size: 100%; background-attachment: fixed;">
+   <div class = "container" style = "margin-top: 10%">
+    <a class = "select1 btn btn-default" href="/sub_details/?entry=key_staff">Key Staff</a> <br>
+    <a class = "select1 btn btn-default" href="/sub_details/?entry=facilitation_bots">Facilitation Bots</a> <br>
+    <a class = "select1 btn btn-default" href="/sub_details/?entry=lab_assets"  >Lab Assistants</a> <br>
+   </div>
+</div>
+
+<div id = "tech" class = "page_element container-fluid" style = "height:75%;color: white;background: url('/static/img/Circuitry.jpg'); background-size: 100%">
+    <div class = "container" style = "margin-top: 15%">
+        <a class = "select1 btn btn-default" href="/sub_details/?entry=tech_support" >Tech Support</a>
+    </div>
+
+</div>
+
+<style>
+@media only screen and (max-width: 767px){
+    .page_element {
+       background-size: 500% !important;
+    }
+
+    #tech {
+       height: 30% !important;
+    }
+
+    #fac {
+       height: 45% !important;
+    }
+
+
+}
+
+</style>
+
+<!--
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/static/js/sakura/jquery-sakura.min.js"></script>
+<script>
+$(window).load(function(){
+
+    $(".top-header").sakura();
+});
+
+</script> -->
+{% endblock content %}

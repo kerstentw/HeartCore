@@ -1,0 +1,94 @@
+{% extends "templates/Market/base.html" %}
+{% block content %}
+
+<div id = "Hackscreen" style = "padding-top: 20%;font-family: 'Courier New';position: fixed; width: 100%; height: 100%; color: #20C20E;background-color: black; display:none"></div>
+
+
+<div class = "container" style = "padding-top: 30px; padding-bottom: 30px">
+
+<div style = "width:350px; overflow:hidden">
+<!--<div class = "gay_images" style = "overflow: hidden;background-position: right;background-size: 900px;background-repeat:no-repeat;background-image: url('/static/img/chars/{{Name}}.jpg');height:450px;width: 600px;padding-left:-100px"></div>-->
+
+<img class = "char_img" src= "/static/img/chars/{{Name}}.jpg" style = "width: 250px;">
+<img class = "cast_img" src= "/static/img/chars/{{Name}}2.jpg" style = "width: 250px; display: none">
+
+</div>
+    <h1> {{Name}} </h1>
+
+   
+    <div class = "char_story">
+
+        <h2>Details</h2>
+        <p>
+            {{char_story}}
+        </p>
+    </div>
+    <div id = "status">
+
+    </div>
+
+    <div class = "cast_story" style = "display: none">
+
+        <p>
+            {{cast_story}}
+        </p>
+    </div>
+
+
+
+<button onclick="addToCart('{{Name}}')" class = "btn btn-success">Add To Cart</button>
+<br/>
+
+      <a class = "btn btn-success" style = "margin-bottom: 8px; margin-top: 8px; margin-right: 10px" href="/cart">
+          <img src="/static/img/cart_w.png" style = "height: 19px; margin: 5px;">View Cart 
+              <div id = "cartNum" style = "color: white; font-size: 15px">
+              </div>
+      </a>
+
+<br/>
+ <a class = "btn btn-default" href = "/index/#Market"> Back </a>
+<br/>
+<br/>
+<button class = "hackit btn btn-warning" onclick = "hack()" > <img src = "/static/img/foxgif.gif" style = "height:45px;"></img><br/>HACK</button>
+
+</div>
+
+<script>
+var addToCart = function(_model_name){
+
+    $.get("/update_cart",{"inCart":_model_name}, function(){
+        $("#status").text("Added To Cart");
+    });
+
+
+}
+
+
+var hack = function(){
+//Transition
+  $("#Hackscreen").show();
+  window.scrollTo(0,0);
+  setTimeout(function(){$("#Hackscreen").text("=========HEARTCORE v0.11 ================")},10);
+  setTimeout(function(){$("#Hackscreen").append("<br/>[55.44]Unauthorized Access Detected...")},700);
+  setTimeout(function(){$("#Hackscreen").append("<br/>[9eart0ORx] ::: Attempting Trace...")},1000);
+  setTimeout(function(){$("#Hackscreen").append("<s style = 'color: red'>FAILED</s>")},2000);
+  setTimeout(function(){$("#Hackscreen").append("<br/>[Hear00aaa]::: MEMORY_OVERRIDE @ 0x54d123a312ae3442aaa")},1200);
+  setTimeout(function(){$("#Hackscreen").append("<br/>[Heart4444]Beginning Dump...")},1600);
+  setTimeout(function(){$("#Hackscreen").append("<br/>jfaifj23jlaffjlkasdfklj%lkjdfsdl%lkadsdf<br/>fjsadkfjsadlkfsdfl;kasdf<br/>sdfjksaldfklkasdfwae7484%%%%%r8sflsijsdf<br/>4747^^^^46728429$&829239*)(*&FDAO98dV*(vhdfsdf)(T*j")},1500);
+  setTimeout(function(){$("#Hackscreen").append("<br/>[Hear00aaa]::: MEMORY_OVERRIDE @ 0x5asdddddd")},1200);
+  setTimeout(function(){$("#Hackscreen").append("<br/>[Hear00aaa]::: MEMORY_OVERRIDE @ 0x54aaaaaaaaaaaaaaaaaa")},1200);
+
+  setTimeout(function(){$("#Hackscreen").html("<style>#Hackscreen {background-image: url('/static/img/heart_beat.gif'); background-size: 100px;}</style><strong style = 'border: 2px solid pink; color:pink'> [Heartcore] ::: &#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084  WELCOME TO HEARTCORE^^ &#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084 </strong> <img src='/static/img/heart_beat.gif' style = 'height:65%;'> </img></div>")},3000);
+
+  setTimeout(function(){$("#Hackscreen").hide()},7000);
+  $(".cast_story").show();
+  $(".char_story").hide();
+  $(".cast_img").show();
+  $(".char_img").hide();
+  $(".hackit").hide();
+ 
+}
+
+</script>
+
+{% endblock content %}
