@@ -54,7 +54,31 @@ def index(request):
 
 
 def details(request):
+    adder = {
+        "flower_bomb" : """- I have a headache.
+                           - Do you ever wonder about fate?
+                           - Tell me a secret.
+                           - You’re as pretty as a picture. """,
+        "sacre_bleu" : """- Let’s strike a pose.
+                          - I’d like some tea.
+                          - Help me loosen up.
+                          - How do you like to spend your weekend? """,
+        "tyler_d" : """ - Cheer me up.
+                        - Motivate me.
+                        - Let’s play a game!
+                        - Say cheese!""",
+        "kristen_barlow" : """- Your eyes are dark and soulless.
+                              - I like my women strong.
+                              - I’m feeling a little tense.
+                              - You know what will last longer?""",
+        "flynn_barbary" : """ 
+                              - May I have this dance?
+                              - Allow me to start a beat for you.
+                              - I would like to capture this moment with you.
+                              - Tell me something no one knows.""",
 
+
+    }
     status = ""
 
     entry = request.GET.get("entry")
