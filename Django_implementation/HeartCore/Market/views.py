@@ -58,24 +58,23 @@ def details(request):
         "flower_bomb" : """- I have a headache.
                            - Do you ever wonder about fate?
                            - Tell me a secret.
-                           - You’re as pretty as a picture. """,
-        "sacre_bleu" : """- Let’s strike a pose.
-                          - I’d like some tea.
+                           - You're as pretty as a picture.""".encode("utf-8"),
+        "sacre_bleu" : """- Let's strike a pose.
+                          - I'd like some tea.
                           - Help me loosen up.
-                          - How do you like to spend your weekend? """,
+                          - How do you like to spend your weekend?""".encode("utf-8"),
         "tyler_d" : """ - Cheer me up.
                         - Motivate me.
-                        - Let’s play a game!
-                        - Say cheese!""",
+                        - Let's play a game!
+                        - Say cheese!""".encode("utf-8"),
         "kristen_barlow" : """- Your eyes are dark and soulless.
                               - I like my women strong.
-                              - I’m feeling a little tense.
-                              - You know what will last longer?""",
-        "flynn_barbary" : """ 
-                              - May I have this dance?
-                              - Allow me to start a beat for you.
-                              - I would like to capture this moment with you.
-                              - Tell me something no one knows.""",
+                              - I'm feeling a little tense.
+                              - You know what will last longer?""".encode("utf-8"),
+        "flynn_barbary" : """- May I have this dance?
+                             - Allow me to start a beat for you.
+                             - I would like to capture this moment with you.
+                             - Tell me something no one knows.""".encode("utf-8"),
 
 
     }
