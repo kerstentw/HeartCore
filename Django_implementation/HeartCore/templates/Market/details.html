@@ -17,7 +17,10 @@
     
     {% if directions %}
     <h2>Voice Commands </h2>
-    {{directions}}
+    {% for direct in directions %}
+        -<strong>{{direct}}</strong>
+
+    {% endfor %}
     {% endif %}
    
     <div class = "char_story">
