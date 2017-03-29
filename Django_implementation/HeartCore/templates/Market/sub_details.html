@@ -15,7 +15,7 @@
 
 {% if title in test %}
 
-  <h2>{{title}}</h2>
+  <h2 id = {{title}}></h2>
     
 
     {% for name, story in dict_of_bios.items %}
@@ -37,11 +37,10 @@
 {% else %}
 </p>
 
-<h2>{{title}}</h2>
+<h2 id = {{title}}>{{title}}</h2>
 
   {{ summary }}
 
- <h2> Members: </h2>
     {% for name, story in dict_of_bios.items %}
         <h3 id = {{name}} >{{name}}</h3>
 
@@ -54,7 +53,7 @@
 
 
 {% endif %}
-
+<br/>
 <a class = "btn btn-default" href = "/index"> Back </a><br/><br/>
 <button class = "hackit btn btn-warning" onclick = "hack()" > <img src = "/static/img/foxgif.gif" style = "height:45px"></img><br/>HACK</button>
 

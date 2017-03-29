@@ -104,9 +104,7 @@ def sub_details(request):
 
     #Get BIOS from Staff 
     for char in list_of_cast:
-        print "!!!!!!!!!",char
         dict_of_bios[char] = cast_char.STAFF[char]
-        print "????????????????\n", dict_of_bios[char]
         summary = dict_of_bios[char]["fake"] 
 
     content = {
