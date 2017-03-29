@@ -20,7 +20,7 @@
 
     {% for name, story in dict_of_bios.items %}
 
-        <h3 id = {{name}} >{{name}}</h3>
+        <h3 id = {{name}} ></h3>
 
        <div class = "char_story" style = "">
        {{story.fake}}
@@ -42,7 +42,7 @@
   {{ summary }}
 
     {% for name, story in dict_of_bios.items %}
-        <h3 id = {{name}} >{{name}}</h3>
+        <h3 id = {{name}} ></h3>
 
         <div class = "cast_story" style = "display: none">
              <br><br>{{story.real}}<br><br>
