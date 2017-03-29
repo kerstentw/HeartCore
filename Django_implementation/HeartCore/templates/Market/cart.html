@@ -7,7 +7,7 @@
 <h2>Current Cart</h2>
 
     {% for item in IN_CART %}
-    {{item}} <br/>
+    <div id = "{{item}}">{{item}}</div> <br/>
     {% endfor %}
 
 <h3>Total: {{ IN_CART | length }}</h3>
