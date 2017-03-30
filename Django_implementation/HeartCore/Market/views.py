@@ -128,7 +128,7 @@ def cart(request):
 
   status = ""
 
-  content = {"IN_CART": request.session.get("inCart")}
+  content = {"IN_CART": set(request.session.get("inCart"))}
 
   template = "templates/Market/cart.html"
 
