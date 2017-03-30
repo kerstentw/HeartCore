@@ -96,8 +96,7 @@ def details(request):
 
 def sub_details(request):
     array_choice = request.GET.get("entry")
-    
-    print array_choice
+    master = cast_char.MASTER    
     list_of_cast = cast_char.MASTER[array_choice]
     
     dict_of_bios = {}
@@ -107,11 +106,15 @@ def sub_details(request):
         dict_of_bios[char] = cast_char.STAFF[char]
         summary = dict_of_bios[char]["fake"] 
 
+
+    dict_list = listify_dict(dict_of_bios, list_of_cast)
+
     content = {
        "summary" : summary,
        "title" : array_choice,
        "dict_of_bios" : dict_of_bios,
-       "test" : ["tech_support","key_staff"]
+       "test" : ["tech_support","key_staff"],
+       "dict_list" :  dict_list
     }
 
     print dict_of_bios 
@@ -130,3 +133,16 @@ def cart(request):
   template = "templates/Market/cart.html"
 
   return render(request, template, content)
+
+
+
+def listify_dict(dictionary, order_list):
+    return_list = []
+
+    for check in order_list:
+        for key in dictionary:
+            if check == key:
+                print "\n\nDOING:",key
+                return_list.append({key:dictionary[key]})
+
+    return return_list

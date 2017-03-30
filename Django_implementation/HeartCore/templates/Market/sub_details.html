@@ -12,15 +12,19 @@
     Browser Does not Support SVG
 </object>
 <p class = "char_story">
-
 {% if title in test %}
 
   <h2 id = {{title}}></h2>
     
 
-    {% for name, story in dict_of_bios.items %}
+
+
+   {% for inner_dict in dict_list %}
+
+    {% for name, story in inner_dict.items %}
 
         <h3 id = {{name}} ></h3>
+        <img src = "/static/img/chars/{{name}}.jpg" style = "width:250px" alt = "">
 
        <div class = "char_story" style = "">
        {{story.fake}}
@@ -31,28 +35,31 @@
         </div>
 
     {% endfor %}
+  {% endfor %}
 
-
-
-{% else %}
 </p>
+{% else %}
 
-<h2 id = {{title}}>{{title}}</h2>
+<h2 id = {{title}}></h2>
 
   {{ summary }}
-
-    {% for name, story in dict_of_bios.items %}
+  <br/>
+  <br/>
+  {% for inner_dict in dict_list %}
+    {% for name, story in inner_dict.items %}
+        
         <h3 id = {{name}} ></h3>
-
+        <img src = "/static/img/chars/{{name}}.jpg" style = "width:250px;" alt = "">
         <div class = "cast_story" style = "display: none">
              <br><br>{{story.real}}<br><br>
         </div>
 
     {% endfor %}
-
+ {% endfor %}
 
 
 {% endif %}
+<br/>
 <br/>
 <a class = "btn btn-default" href = "/index"> Back </a><br/><br/>
 <button class = "hackit btn btn-warning" onclick = "hack()" > <img src = "/static/img/foxgif.gif" style = "height:45px"></img><br/>HACK</button>
@@ -89,7 +96,7 @@ var hack = function(){
   setTimeout(function(){$("#Hackscreen").append("<br/>[Hear00aaa]::: MEMORY_OVERRIDE @ 0x5asdddddd")},1200);
   setTimeout(function(){$("#Hackscreen").append("<br/>[Hear00aaa]::: MEMORY_OVERRIDE @ 0x54aaaaaaaaaaaaaaaaaa")},1200);
 
-  setTimeout(function(){$("#Hackscreen").html("<style>#Hackscreen {background-image: url('/static/img/heart_beat.gif'); background-size: 100px;}</style><strong style = 'border: 2px solid pink; color:pink'> [Heartcore] ::: &#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084  WELCOME TO HEARTCORE^^ &#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084 </strong> <img src='/static/img/heart_beat.gif' style = 'height:65%;'> </img></div>")},3000);
+  setTimeout(function(){$("#Hackscreen").html("<style>#Hackscreen {background-image: url('/static/img/heart_beat.gif'); background-size: 100px;}</style><strong style = 'border: 2px solid pink; color:pink'> [Heartcore] ::: &#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084  WELCOME TO HEARTCORE^^ &#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084&#10084 </strong> <img src='/static/img/heart_beat.gif' style = 'height:75%;'> </img> </div>")},3000);
 
   setTimeout(function(){$("#Hackscreen").hide()},7000);
   $(".cast_story").show();
