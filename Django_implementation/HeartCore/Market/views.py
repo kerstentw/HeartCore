@@ -74,6 +74,9 @@ def details(request):
     if code == "7a90e549879d86336e1258edf765d007dc8f21831253b157dc835182460935dd":
         add_info = adder[entry] 
 
+    elif code == "1AeJdoKBFqfRJBncnstiWpPhXSKxwqK2KL":
+        add_info = "Address_2: 1FMWbV67WgE51abB676vp6ShBVMet1HAVV"
+
     else:
         add_info = None
 
@@ -126,13 +129,24 @@ def sub_details(request):
 
 def cart(request):
 
-  status = ""
+    status = ""
+    current_cart = set(request.session.get("inCart"))  
+    mykey = set(["flower_bomb","sacre_bleu","tyler_d","kristen_barlow","flynn_barbary"])
+ 
+ 
+    if current_cart == mykey:
+        prize = "Secret_Key2: L4gV8ebMgePEDwPiCL8EJU6sPawEF5ARRwxNEbQQr7zUSkuzRbHu"
 
-  content = {"IN_CART": set(request.session.get("inCart"))}
+    else:
+        prize = None
 
-  template = "templates/Market/cart.html"
+    content = {"IN_CART": current_cart,
+               "secret" : prize
+              }
 
-  return render(request, template, content)
+    template = "templates/Market/cart.html"
+
+    return render(request, template, content)
 
 
 
