@@ -12,6 +12,7 @@
     Browser Does not Support SVG
 </object>
 <p class = "char_story">
+{% autoescape off %}
 {% if title in test %}
 
   <h2 id = {{title}}></h2>
@@ -60,6 +61,8 @@
 
 
 {% endif %}
+{% endautoescape %}
+
 <br/>
 <br/>
 <a class = "btn btn-default" href = "/index"> Back </a><br/><br/>
