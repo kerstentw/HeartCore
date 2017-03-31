@@ -2,8 +2,8 @@
  "#scott_asti" : ["Scott Asti","Marcus Moretti"],
  "#lynn":["Sarah Welles","Sarah Welles"],
  "#kevin_lambert" :["Kevin Lambert","Baxter Jones"],
- "#flower_bomb" : ["Flower Bomb","EDI"],
- "#sacre_bleu" : ["Sacre Bleu","DOT"],
+ "#flower_bomb" : ["Flowerbomb","EDI"],
+ "#sacre_bleu" : ["Sacr&egrave Bleu","DOT"],
  "#tyler_d" : ["Tyler D/Vanessica Carver", "CAL"],
  "#kristen_barlow" : ["Veronica Ice","GEM"],
  "#flynn_barbary" : ["Hakoda","FIN"],
@@ -26,13 +26,13 @@
 
 var set_page = function(){
     for (name in people_array){
-        $(name).text(people_array[name][1])
+        $(name).html(people_array[name][1])
     }
    }
  
 var set_real_name = function(){
     for (name in people_array){
-        $(name).text(people_array[name][0]);
+        $(name).html(people_array[name][0]);
     }
    }
 
