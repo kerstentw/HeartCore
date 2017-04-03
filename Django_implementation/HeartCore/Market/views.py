@@ -8,15 +8,11 @@ import traceback
 def update_cart(request):
     cart = []
     items = request.session.get("inCart")
-    print "ITEMS",items
     if items:
         cart.extend(items)
-    print request.GET
     clear = request.GET.get("clear")
-    print "XXX",clear
 
     if clear:
-        print "CLEARING" 
         request.session["inCart"] = []
         return HttpResponse('ok')
 
@@ -25,10 +21,8 @@ def update_cart(request):
             return HttpResponseNotAllowed(['POST'])
         cart.append(request.GET.get("inCart"))
         request.session['inCart'] = cart
-        print request.session 
     
     except:
-        print "Uh Oh"    
         traceback.print_exc()
 
     return HttpResponse('ok')
@@ -40,7 +34,6 @@ def update_cart(request):
 
 def index(request):
 
-    print request.session.get("inCart")    
 
     template = "templates/Market/index.html"
     content = { 
@@ -80,7 +73,6 @@ def details(request):
     else:
         add_info = None
 
-    print "GETTING", entry
 
     if not entry: status = "invalid query"
 
@@ -120,7 +112,6 @@ def sub_details(request):
        "dict_list" :  dict_list
     }
 
-    print dict_of_bios 
     template = "templates/Market/sub_details.html"
 
     return render(request, template, content)
@@ -156,7 +147,6 @@ def listify_dict(dictionary, order_list):
     for check in order_list:
         for key in dictionary:
             if check == key:
-                print "\n\nDOING:",key
                 return_list.append({key:dictionary[key]})
 
     return return_list
