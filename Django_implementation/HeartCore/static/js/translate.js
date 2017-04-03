@@ -10,7 +10,7 @@
  "#angie_ahn" : ["MaybeBaby","MaybeBaby"],
  "#caitlin_michelle" : ["Dahlia Doll","Dahlia Doll"],
  "#joey_park" : ["Jasper Jigglebuns","Jasper Jigglebuns"],
- "#melissa_harper" : ["Reivyn Vicieux - Stage Manager","Bee Khadka"],
+ "#melissa_harper" : ["Reivyn Vicieux - Stage Manager","Reivyn Vicieux"],
  "#nick_holmes" : ["Maia Pussy Sparkles - Assistant Stage Manager", "Maia Pussy Sparkles"],
  "#ruby_lee" : ["Ruby Lee - Run Crew","Ruby Lee"],
  "#corlina_wilkins" : ["Katastrophy - Run Crew", "Katastrophy"],
@@ -21,7 +21,7 @@
  "#facilitation_bots" : ["Facilitation Bots", "Facilitation Bots"],
  "#lab_assets" : ["Lab Assistants","Lab Assistants"],
  "#tech_support" : ["Tech Support", "Tech Support"],
- "#emily_robinette" : ["Ms. Dee - Run Crew", "Emily Robinette"]
+ "#emily_robinette" : ["Ms. Dee - Run Crew", "Ms. Dee"]
 }
 
 var set_page = function(){
