@@ -34,7 +34,7 @@ C_PICS = ["/static/img/Simon.png","/static/img/Robert.png","/static/img/Tai.png"
 MASTER = {
 "cast" : ["flower_bomb","sacre_bleu","tyler_d","kristen_barlow","flynn_barbary"],
 "facilitation_bots" : ["angie_ahn","caitlin_michelle","joey_park"],
-"lab_assets" : ["melissa_harper","corlina_wilkins","nick_holmes","ruby_lee","emily_robinette"],
+"lab_assets" : ["melissa_harper","corlina_wilkins","ruby_lee","nick_holmes","emily_robinette"],
 "key_staff" : ["scott_asti","lynn","kevin_lambert"],
 "tech_support" : ["sc_clarke","robert_evans","tai_kersten"]
 }
@@ -95,7 +95,7 @@ STAFF ={
   },
   "nick_holmes":{
     "fake":"The unsung heroes of the Krell, the Lab Assistants ensure that the production of all synthetics is conducted in a safe and timely manner. Some are even rumoured to be cybernetically enhanced themselves, such is the tireless manner in which they work to keep things running smoothly.",
-    "real":"Nick Holmes puts the \"ass\" and \"man\" in assistant stage manager. As such, she would like to thank both her ass and her man for helping him get this far. Nick's hobbies include hairography and all exercise that includes not moving. She loves glitter so much he says \"glitterally\" instead of \"literally\". One day she will learn to death drop."
+    "real":"Maia puts the \"ass\" and \"man\" in assistant stage manager. As such, she would like to thank both her ass and her man for helping him get this far. Maia's hobbies include hairography and all exercise that includes not moving. She loves glitter so much he says \"glitterally\" instead of \"literally\". One day she will learn to death drop. <br/><strong>Instagram: </strong>maia.p.sparkles"
   },
   "ruby_lee":{
     "fake":"The unsung heroes of the Krell, the Lab Assistants ensure that the production of all synthetics is conducted in a safe and timely manner. Some are even rumoured to be cybernetically enhanced themselves, such is the tireless manner in which they work to keep things running smoothly.",
